@@ -12,12 +12,12 @@ namespace Soenneker.Kiota.NoOpAuthenticationProvider;
 public sealed class NoOpAuthenticationProvider : IAuthenticationProvider
 {
     /// <summary>
-    /// Executes the authenticate request async operation.
+    /// Authenticates request Async for the no op authentication provider.
     /// </summary>
-    /// <param name="request">The request.</param>
-    /// <param name="additionalAuthenticationContext">The additional authentication context.</param>
-    /// <param name="cancellationToken">The cancellation token.</param>
-    /// <returns>A task that represents the asynchronous operation.</returns>
+    /// <param name="request">request that defines the request to send.</param>
+    /// <param name="additionalAuthenticationContext">additional Authentication Context to process.</param>
+    /// <param name="cancellationToken">Token used to cancel the operation.</param>
+    /// <returns>A task that completes when the authenticate request async operation is complete.</returns>
     public Task AuthenticateRequestAsync(RequestInformation request, Dictionary<string, object>? additionalAuthenticationContext = null,
         CancellationToken cancellationToken = default)
     {
